@@ -29,5 +29,11 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'backend' => [
+        'api' => [
+            'url' => env('BACKEND_APIURL'),
+            'version' => env('API_VERSION', 'v1'),
+            'current_version' => env('API_CURRENT_VERSION', 'v1'),
+        ]
+    ],
 ];

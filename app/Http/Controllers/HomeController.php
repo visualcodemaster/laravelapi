@@ -28,12 +28,12 @@ class HomeController extends Controller
         $user = Auth::user();
         if(!empty($user) ){
             if($user->roles()->first()->slug == 'superadmin') {
-                return redirect(route('admin.dashboard'));
+                return redirect()->route('admin.dashboard');
             }
             else {
-                return redirect(route('users.dashboard'));
+                return redirect()->route('users.dashboard');
             }
         }
-        return redirect(route('landing'));
+        return redirect()->route('landing');
     }
 }
