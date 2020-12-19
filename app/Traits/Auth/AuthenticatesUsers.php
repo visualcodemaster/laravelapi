@@ -2,6 +2,7 @@
 
 namespace App\Traits\Auth;
 
+use App\Http\Requests\UserLoginRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,7 +30,7 @@ trait AuthenticatesUsers
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function login(Request $request)
+    public function login(UserLoginRequest $request)
     {
         $this->validateLogin($request);
 
